@@ -1,0 +1,46 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "branchName": "AvadiInfo",
+      "location": "Avadi",
+      "sector": "IT"
+    },
+    {
+      "id": 2,
+      "branchName": "OMRInfo",
+      "location": "siruseri",
+      "sector": "banking"
+    },
+    {
+      "id": 3,
+      "branchName": "TambaramInfo",
+      "location": "Tambaram",
+      "sector": "IT"
+    },
+    {
+      "id": 4,
+      "branchName": "TambaramInfo",
+      "location": "Tambaram",
+      "sector": "IT"
+    },
+    {
+      "id": 5,
+      "branchName": "OMRInfo",
+      "location": "siruseri",
+      "sector": "banking"
+    },
+    {
+      "branchName": "sdssf",
+      "location": "fdf",
+      "sector": "fdgfg",
+      "id": 6
+    },
+    {
+      "branchName": "arun",
+      "location": "america",
+      "sector": "pirates",
+      "id": 7
+    }
+  ]
+}
