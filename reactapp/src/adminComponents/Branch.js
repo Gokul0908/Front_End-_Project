@@ -1,15 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+
 
 const Branch = () => {
     const [data, setData] = useState([]);
+    
 
     useEffect(() => {
         axios.get('http://localhost:3000/employee')
             .then(res => setData(res.data))
             .catch(err => console.log(err))
     }, []);
+    const handleDelete=(id)=>{
+        const confirm=window.confirm("Are you sure want to delete");
+        if(confirm){
+            axios.delete('http://localhost:3000/employee/'+id)
+            .then(res =>{
+                window.location.reload()
+            }).catch(err => console.log(err))
+        }
+    }
 
     return (
         <div className='container mt-5 '>
@@ -37,7 +48,9 @@ const Branch = () => {
                             <td>{d.sector}</td>
                             <td>
                                 <Link to="/edit" className='btn btn-sm btn-primary me-2'>Edit</Link>
-                                <Link to="/delete" className='btn btn-sm btn-danger me-2'>Delete</Link>
+                                {/* <Link to="/delete" className='btn btn-sm btn-danger me-2' onClick={e => handleDelete(d.id)}>Delete</Link> */}
+                                <button  className='btn btn-sm btn-danger' onClick={e => handleDelete(d.id)}>Delete</button>
+                                
                             </td>
                         </tr>
                     })}
