@@ -3,19 +3,19 @@ import axios from 'axios';
 import { Link} from 'react-router-dom';
 
 
-const Branch = () => {
+const ProjectTable = () => {
     const [data, setData] = useState([]);
     
 
     useEffect(() => {
-        axios.get('http://localhost:3000/branch')
+        axios.get('http://localhost:3000/project')
             .then(res => setData(res.data))
             .catch(err => console.log(err))
     }, []);
     const handleDelete=(id)=>{
         const confirm=window.confirm("Are you sure want to delete");
         if(confirm){
-            axios.delete('http://localhost:3000/branch/'+id)
+            axios.delete('http://localhost:3000/project/'+id)
             .then(res =>{
                 window.location.reload()
             }).catch(err => console.log(err))
@@ -24,18 +24,19 @@ const Branch = () => {
 
     return (
         <div className='container mt-5 '>
-            <h3 className=' d-flex justify-content-center'>Branch List</h3>
+            <h3 className=' d-flex justify-content-center'>Project List</h3>
             <div className=' d-flex justify-content-end'>
-            <Link to="/create" className="btn btn-success">AddBranch
+            <Link to="/projectcreate" className="btn btn-success">Project++
             </Link>{"\n"}
             </div>
             <table className='table table-striped'>
                 <thead>
                     <tr className='bg-secondary'>
                         <th>ID</th>
-                        <th>BranchName</th>
-                        <th>Location</th>
-                        <th>Sector</th>
+                        <th>Project Name</th>
+                        <th>Client Name</th>
+                        <th>Duration</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -43,11 +44,12 @@ const Branch = () => {
                     {data.map((d, i) => {
                         return <tr key={i}>
                             <td>{d.id}</td>
-                            <td>{d.branchName}</td>
-                            <td>{d.location}</td>
-                            <td>{d.sector}</td>
+                            <td>{d.pname}</td>
+                            <td>{d.cname}</td>
+                            <td>{d.duration}</td>
+                            <td>{d.status}</td>
                             <td>
-                                <Link to={`/edit/${d.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
+                                <Link to={`/projectedit/${d.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
                                 {/* <Link to="/delete" className='btn btn-sm btn-danger me-2' onClick={e => handleDelete(d.id)}>Delete</Link> */}
                                 <button  className='btn btn-sm btn-danger' onClick={e => handleDelete(d.id)}>Delete</button>
                                 
@@ -60,4 +62,4 @@ const Branch = () => {
     )
 }
 
-export default Branch;
+export default ProjectTable;

@@ -1,22 +1,16 @@
 {
-  "employee": [
-    {
-      "id": 1,
-      "branchName": "AvadiInfo",
-      "location": "Avadi",
-      "sector": "IT"
-    },
+  "branch": [
     {
       "id": 2,
       "branchName": "OMRInfo",
       "location": "siruseri",
-      "sector": "banking"
+      "sector": "bankings"
     },
     {
       "id": 3,
       "branchName": "TambaramInfo",
-      "location": "Tambaram",
-      "sector": "IT"
+      "location": "Tambaramvf",
+      "sector": "ITi"
     },
     {
       "id": 4,
@@ -31,16 +25,76 @@
       "sector": "banking"
     },
     {
-      "branchName": "sdssf",
-      "location": "fdf",
-      "sector": "fdgfg",
-      "id": 6
-    },
-    {
       "branchName": "arun",
       "location": "america",
       "sector": "pirates",
       "id": 7
+    },
+    {
+      "branchName": "rajkumar s",
+      "location": "chennai",
+      "sector": "IT",
+      "id": 9
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Sakthivel R",
+      "mobile": "8870438087",
+      "email": "sakthi@gmail.com",
+      "address": "Avadii"
+    },
+    {
+      "id": 2,
+      "name": "RajKumar",
+      "mobile": "886576597",
+      "email": "raj@gmail.com",
+      "address": "chengalpat"
+    },
+    {
+      "id": 3,
+      "name": "Yeshwanth",
+      "mobile": "8805747557",
+      "email": "yesh@gmail.com",
+      "address": "poonamlle"
+    },
+    {
+      "name": "Mani",
+      "mobile": "909087909",
+      "email": "jhonrajkumar333@gmail.com",
+      "address": "thanjavur",
+      "id": 4
+    }
+  ],
+  "project": [
+    {
+      "id": 1,
+      "pname": "e-commerse",
+      "cname": "TVS",
+      "duration": "6 months",
+      "status": "ongoing"
+    },
+    {
+      "id": 2,
+      "pname": "e-commerse",
+      "cname": "TVS",
+      "duration": "6 months",
+      "status": "ongoing"
+    },
+    {
+      "id": 3,
+      "pname": "e-commerse",
+      "cname": "TVS",
+      "duration": "6 months",
+      "status": "ongoing"
+    },
+    {
+      "id": 4,
+      "pname": "e-commerse",
+      "cname": "TVS",
+      "duration": "6 months",
+      "status": "ongoing"
     }
   ]
 }
