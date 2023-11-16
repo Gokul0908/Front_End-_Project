@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link, Outlet } from 'react-router-dom';
+
 
 const EditBranch = () => {
     const { id } = useParams();
@@ -68,7 +69,7 @@ const EditBranch = () => {
                 </form>
 
             </div>
-            
+            <Outlet/>
         </div>
     );
 }

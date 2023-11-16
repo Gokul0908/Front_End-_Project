@@ -50,7 +50,8 @@
       "name": "RajKumar",
       "mobile": "886576597",
       "email": "raj@gmail.com",
-      "address": "chengalpat"
+      "address": "chengalpat",
+      "pass":"raj@123"
     },
     {
       "id": 3,
@@ -65,6 +66,10 @@
       "email": "jhonrajkumar333@gmail.com",
       "address": "thanjavur",
       "id": 4
+    },
+    {
+      "name":"admin",
+      "pass":"admin@123"
     }
   ],
   "project": [

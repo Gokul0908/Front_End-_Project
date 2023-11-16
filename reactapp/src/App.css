@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+/* my css properties */
+.header {
+  width: 100%; /* Ensure the header covers the full width */
+  background-color: #333; /* Add your preferred background color */
+  color: white; /* Set text color */
+  padding: 10px; /* Add padding as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.5rem; /* Adjust the icon size as needed */
+  margin-right: 10px; /* Add margin between icons if needed */
+}
+
+
+

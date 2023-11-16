@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link} from 'react-router-dom';
+import { Link, Outlet} from 'react-router-dom';
 
 
 const Branch = () => {
@@ -56,6 +56,7 @@ const Branch = () => {
                     })}
                 </tbody>
             </table>
+            <Outlet/>
         </div>
     )
 }
