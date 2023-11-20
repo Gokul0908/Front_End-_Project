@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import Logout from '../adminComponents/Logout';
 
 function UserDash(){
 	
 	
 	const [employeeDetails, setEmployeeDetails] = useState({});
-  const loggedInEmployeeName = "RajKumar"; // Replace this with the actual logged-in employee's name
+  const loggedInEmployeeName = sessionStorage.getItem("user"); // Replace this with the actual logged-in employee's name
 
   useEffect(() => {
     // Fetch employee details based on the logged-in employee's name
@@ -22,13 +22,14 @@ function UserDash(){
     return(
         <div>
             <header className="container-fluid bg bg-info" style={{"height":"10vh",fontSize:27}}>
-                {/* <div style={{"paddingLeft":10,"paddingTop":20}}>Beast Technologies <div className="text-end" style={{"paddingRight":10,"paddingTop":20}}>Welcome, User</div></div> */}
+                
                 <div className="row">
                     <div className="col-md-2">
                         <div style={{"paddingLeft":10,"paddingTop":20}}>Beast Technologies</div>
                     </div>
                     <div className="col-md-10">
-                    <div className="text-end" style={{"paddingRight":10,"paddingTop":20}}>Welcome, {employeeDetails.name}</div>
+                    <div className="text-end" style={{"paddingRight":10,"paddingTop":20}}>Welcome, {employeeDetails.name} <Logout selectedOption={"user"}></Logout></div>
+                    
                     </div>
                 </div>
                 

@@ -1,5 +1,5 @@
 //appRouter
-import React from 'react';
+import React, { Component } from 'react';
 import{BrowserRouter,Route,Routes} from 'react-router-dom';
 import Branch from './Branch';
 //import Bran
@@ -23,7 +23,7 @@ import Login from '../LandPage/Login';
 
 import DashboardComp from './DashboardComp';
 import UserDash from '../LandPage/UserDash';
-
+import Protected from './Protected';
 
 
 
@@ -35,7 +35,7 @@ const AppRouter = () => {
         <div className='app-container'>
      
      <Routes>
-     <Route path='userdash' element={<UserDash/>}/>
+     <Route path='userdash' element={<Protected Component={UserDash}/>}/>
       <Route path='/' element={<LandPage/>}>
                   <Route path="" element={<Home />} />
                   <Route path="home" element={<Home />} />
@@ -44,7 +44,7 @@ const AppRouter = () => {
                    <Route path="login" element={<Login />} /> 
                  
       </Route>
-      <Route path='/admindash' element={<AdminDash/>}>
+      <Route path='/admindash' element={<Protected Component={AdminDash}/>}>
                    <Route path='' element={<DashboardComp/>}/>
                    <Route path='branch' element={<Branch/>}/>
                    <Route path='create' element={<AddBranch/>}/>

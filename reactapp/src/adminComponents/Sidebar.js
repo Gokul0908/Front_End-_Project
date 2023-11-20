@@ -1,6 +1,7 @@
 import React from 'react'
 import {BsCart3} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import Logout from './Logout'
 
 const Sidebar = () => {
   return (
@@ -25,7 +26,8 @@ const Sidebar = () => {
         </li>
         <li className='sidebar-list-item'>
                 
-                <Link to={`/`}  className='btn'>Log out</Link>
+                {/* <Link to={`/`}  className='btn'>Log out</Link> */}
+                <Logout selectedOption={"user"}></Logout>
       </li>
 
 

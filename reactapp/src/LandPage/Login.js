@@ -87,7 +87,7 @@ const Login = () => {
             <label><strong>Enter User Id</strong></label>
             <input type='text' name='userid' ref={userId} className='form-control mb-4' />
             <label><strong>Enter User password</strong></label>
-            <input type='text' name='userpass' ref={userPass} className='form-control' />
+            <input type='password' name='userpass' ref={userPass} className='form-control' />
             <button type='button' className='btn btn-success mt-2' onClick={loginUser}>Login</button>
            </form>
            </div> 

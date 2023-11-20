@@ -8,7 +8,8 @@ function AddEmp() {
         name:'',
         mobile:'',
         email:'',
-        address:''
+        address:'',
+        pass:''
     })
     const navigate=useNavigate()
    const handleSubmit=(event)=>{
@@ -50,7 +51,7 @@ function AddEmp() {
                     <div  className='mb-3'>
                         <label htmlFor='password'><strong>Password:</strong> </label>
                         <input type='password' name='pass' className='form-control' placeholder='Enter password' 
-                        onChange={e=> setValues({...values,address:e.target.value})}/>
+                        onChange={e=> setValues({...values,pass:e.target.value})}/>
                     </div>
                     <div className='pt-3'>
                     <button className='btn btn-success'>Submit</button>

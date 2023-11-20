@@ -35,6 +35,13 @@
       "location": "Dilli",
       "sector": "It",
       "id": 10
+    },
+    {
+      "branchName": "fgretre",
+      "location": "tret",
+      "sector": "trt",
+      "pass": "",
+      "id": 11
     }
   ],
   "employee": [
@@ -43,7 +50,8 @@
       "name": "Sakthivel R",
       "mobile": "8870438087",
       "email": "sakthi@gmail.com",
-      "address": "Avadii"
+      "address": "Avadii",
+      "pass": "sakthi@123"
     },
     {
       "id": 2,
@@ -58,18 +66,36 @@
       "name": "Yeshwanth",
       "mobile": "8805747557",
       "email": "yesh@gmail.com",
-      "address": "poonamlle"
+      "address": "poonamlle",
+      "pass": "yesh@123"
     },
     {
       "name": "Mani",
       "mobile": "909087909",
       "email": "jhonrajkumar333@gmail.com",
       "address": "thanjavur",
-      "id": 4
+      "id": 4,
+      "pass": "mani@123"
     },
     {
       "name": "admin",
       "pass": "admin@123"
+    },
+    {
+      "name": "Kumar",
+      "mobile": "909087909",
+      "email": "Sa@123gmail.com",
+      "address": "1234",
+      "pass": "",
+      "id": 5
+    },
+    {
+      "name": "Kumar K",
+      "mobile": "909087909",
+      "email": "jhonrajkumar@gmail.com",
+      "address": "Avadii",
+      "pass": "12345",
+      "id": 6
     }
   ],
   "project": [
