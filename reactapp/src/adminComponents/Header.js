@@ -1,17 +1,17 @@
-// Header.js
+ // Header.js
 
 import React from 'react';
-import { BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, BsJustify } from 'react-icons/bs';
+import { BsPersonCircle } from 'react-icons/bs';
+import { SiChai } from "react-icons/si";
 
 const Header = () => {
   return (
     <header className='header'>
-      <div className='menu-icon'>
-        <BsJustify className='icon' />
+      <div className='logo-and-text'>
+        <SiChai className='icon' />
+        <h6>Company Management</h6>
       </div>
-      {/* <div className='header-left'>
-        <BsSearch className='icon' />
-      </div> */}
+      
       <div className='header-right'>
         <span className='admin-text'>
           Admin<BsPersonCircle className='icon mr-2' />

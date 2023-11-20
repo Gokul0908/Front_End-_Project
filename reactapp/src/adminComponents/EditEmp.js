@@ -32,7 +32,7 @@ const EditEmp = () => {
         axios.put(`http://localhost:3000/employee/${id}`, product)
             .then(() => {
                 window.alert("employee details updated successfully");
-                nav("/emp");
+                nav("/admindash/emp");
             })
             .catch((err) => {
                 console.error(err);
@@ -68,7 +68,7 @@ const EditEmp = () => {
                     </div>
                     <div className='pt-3'>
                     <button className='btn btn-success'>Update</button>
-                    <Link to="/emp" className='btn btn-primary ms-3' >Back</Link>
+                    <Link to="/admindash/emp" className='btn btn-primary ms-3' >Back</Link>
                     </div>
                 </form>
 

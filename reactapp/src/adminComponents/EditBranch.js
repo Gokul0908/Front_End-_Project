@@ -33,7 +33,7 @@ const EditBranch = () => {
         axios.put(`http://localhost:3000/branch/${id}`, product)
             .then(() => {
                 window.alert("Branch details updated successfully");
-                nav("/branch");
+                nav("/admindash/branch");
             })
             .catch((err) => {
                 console.error(err);
@@ -44,7 +44,7 @@ const EditBranch = () => {
        
         <div className='d-flex w-100 vh-100 justify-content-center align-items-center bg-light'>
             <div className='w-50 border bg-white shadow px-5 pt-3 pb-5 rounded'>
-                <h2 className='mb-4'> Add a Branch</h2>
+                <h2 className='mb-4'>Update branch details</h2>
                 <form onSubmit={updateProduct}>
                     <div className='mb-2'>
                         <label htmlFor='BranchName'><strong>Branch Name :</strong> </label>
@@ -64,7 +64,7 @@ const EditBranch = () => {
                     </div>
                     <div className='pt-3'>
                     <button className='btn btn-success'>Update</button>
-                    <Link to="/branch" className='btn btn-primary ms-3' >Back</Link>
+                    <Link to="/admindash/branch" className='btn btn-primary ms-3' >Back</Link>
                     </div>
                 </form>
 

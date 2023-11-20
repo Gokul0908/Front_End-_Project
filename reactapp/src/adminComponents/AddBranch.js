@@ -14,7 +14,7 @@ function AddBranch() {
         axios.post('http://localhost:3000/branch',values)
             .then(res => {
                 console.log(res);
-                navigate('/branch')
+                navigate('/admindash/branch')
             })
             .catch(err => console.log(err))
     
@@ -42,7 +42,7 @@ function AddBranch() {
                     </div>
                     <div className='pt-3'>
                     <button className='btn btn-success'>Submit</button>
-                    <Link to="/branch" className='btn btn-primary ms-3' >Back</Link>
+                    <Link to="/admindash/branch" className='btn btn-primary ms-3' >Back</Link>
                     </div>
                 </form>
 

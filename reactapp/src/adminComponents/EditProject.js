@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link, Outlet } from 'react-router-dom';
 
 const EditProject = () => {
     const { id } = useParams();
@@ -33,7 +33,7 @@ const EditProject = () => {
         axios.put(`http://localhost:3000/project/${id}`, product)
             .then(() => {
                 window.alert("product details updated successfully");
-                nav("/emp");
+                nav("/admindash/emp");
             })
             .catch((err) => {
                 console.error(err);
@@ -69,12 +69,12 @@ const EditProject = () => {
                     </div>
                     <div className='pt-3'>
                     <button className='btn btn-success'>Update</button>
-                    <Link to="/project" className='btn btn-primary ms-3' >Back</Link>
+                    <Link to="/admindash/project" className='btn btn-primary ms-3' >Back</Link>
                     </div>
                 </form>
 
             </div>
-            
+            <Outlet/>
         </div>
     );
 }

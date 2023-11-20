@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link} from 'react-router-dom';
+import { Link, Outlet} from 'react-router-dom';
+
 
 
 const EmpTable = () => {
@@ -26,8 +27,8 @@ const EmpTable = () => {
         <div className='container mt-5 '>
             <h3 className=' d-flex justify-content-center'>EmployeeList</h3>
             <div className=' d-flex justify-content-end'>
-            <Link to="/empcreate" className="btn btn-success">AddEmp
-            </Link>{"\n"}
+            <Link to="/admindash/empcreate" className="btn btn-success">AddEmp
+            </Link>
             </div>
             <table className='table table-striped'>
                 <thead>
@@ -49,7 +50,7 @@ const EmpTable = () => {
                             <td>{d.email}</td>
                             <td>{d.address}</td>
                             <td>
-                                <Link to={`/empedit/${d.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
+                                <Link to={`/admindash/empedit/${d.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
                                 {/* <Link to="/delete" className='btn btn-sm btn-danger me-2' onClick={e => handleDelete(d.id)}>Delete</Link> */}
                                 <button  className='btn btn-sm btn-danger' onClick={e => handleDelete(d.id)}>Delete</button>
                                 
@@ -58,6 +59,7 @@ const EmpTable = () => {
                     })}
                 </tbody>
             </table>
+            <Outlet/>
         </div>
     )
 }

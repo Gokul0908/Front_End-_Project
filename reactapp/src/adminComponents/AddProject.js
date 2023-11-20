@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function AddProject() {
@@ -15,7 +15,7 @@ function AddProject() {
         axios.post('http://localhost:3000/project',values)
             .then(res => {
                 console.log(res);
-                navigate('/project')
+                navigate('/admindash/project')
             })
             .catch(err => console.log(err))
     
@@ -48,12 +48,12 @@ function AddProject() {
                     </div>
                     <div className='pt-3'>
                     <button className='btn btn-success'>Submit</button>
-                    <Link to="/project" className='btn btn-primary ms-3'>Back</Link>
+                    <Link to="/admindash/project" className='btn btn-primary ms-3'>Back</Link>
                     </div>
                 </form>
 
             </div>
-            
+            <Outlet/>
         </div>
     )
 }

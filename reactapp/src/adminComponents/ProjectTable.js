@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link} from 'react-router-dom';
+import { Link, Outlet} from 'react-router-dom';
 
 
 const ProjectTable = () => {
@@ -26,7 +26,7 @@ const ProjectTable = () => {
         <div className='container mt-5 '>
             <h3 className=' d-flex justify-content-center'>Project List</h3>
             <div className=' d-flex justify-content-end'>
-            <Link to="/projectcreate" className="btn btn-success">Project++
+            <Link to="/admindash/projectcreate" className="btn btn-success">Project++
             </Link>{"\n"}
             </div>
             <table className='table table-striped'>
@@ -49,7 +49,7 @@ const ProjectTable = () => {
                             <td>{d.duration}</td>
                             <td>{d.status}</td>
                             <td>
-                                <Link to={`/projectedit/${d.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
+                                <Link to={`/admindash/projectedit/${d.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
                                 {/* <Link to="/delete" className='btn btn-sm btn-danger me-2' onClick={e => handleDelete(d.id)}>Delete</Link> */}
                                 <button  className='btn btn-sm btn-danger' onClick={e => handleDelete(d.id)}>Delete</button>
                                 
@@ -58,6 +58,7 @@ const ProjectTable = () => {
                     })}
                 </tbody>
             </table>
+            <Outlet/>
         </div>
     )
 }

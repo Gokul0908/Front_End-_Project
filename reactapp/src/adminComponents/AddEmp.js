@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+
 
 function AddEmp() {
     const[values,setValues]=useState({
@@ -15,7 +16,7 @@ function AddEmp() {
         axios.post('http://localhost:3000/employee',values)
             .then(res => {
                 console.log(res);
-                navigate('/emp')
+                navigate('/admindash/emp')
             })
             .catch(err => console.log(err))
     
@@ -46,14 +47,19 @@ function AddEmp() {
                         <input type='text' name='address' className='form-control' placeholder='Enter address' 
                         onChange={e=> setValues({...values,address:e.target.value})}/>
                     </div>
+                    <div  className='mb-3'>
+                        <label htmlFor='password'><strong>Password:</strong> </label>
+                        <input type='password' name='pass' className='form-control' placeholder='Enter password' 
+                        onChange={e=> setValues({...values,address:e.target.value})}/>
+                    </div>
                     <div className='pt-3'>
                     <button className='btn btn-success'>Submit</button>
-                    <Link to="/emp" className='btn btn-primary ms-3' >Back</Link>
+                    <Link to="/admindash/emp" className='btn btn-primary ms-3' >Back</Link>
                     </div>
                 </form>
 
             </div>
-            
+            <Outlet/>
         </div>
     )
 }

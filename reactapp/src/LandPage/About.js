@@ -4,7 +4,7 @@ function About() {
     return (
         <div>
             <section class="my-3 my-md-4">
-  <div class="container-fluid">
+  <div class="container-fluid text-white">
     <h4 class="underlined-title mb-4"> Overview </h4>
     <p> Digital FIRST mindset is our strong strategy. We enable and fast-track you into the digital era by improving your operational efficiency, envisioning and building remarkable customer experiences and innovative new business avenues. </p>
     <p> We specialize in transformation solutions that covers Hyper Automation led solutions &amp; services, Cloud Architecture &amp; Technology services and Performance Engineering &amp; Automated Testing services. We deliver best-in-class digital solutions for our customers using Design Thinking methodology, powered by Agile based SAFe, DevOps practices and leveraging technology partnerships with market leading platform providers. </p>
@@ -12,7 +12,7 @@ function About() {
   </div>
 </section>
 <section class="gray-bg"> 
-   <div class="container-fluid py-3 py-md-5"> 
+   <div class="container-fluid py-3 py-md-5  text-white"> 
     <h4 class="underlined-title mb-5"> Our Advantage </h4> 
     <div class="row"> 
      <div class="col-12 col-md-6 mb-3"> 

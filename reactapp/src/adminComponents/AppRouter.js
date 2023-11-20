@@ -15,6 +15,18 @@ import AdminDash from './AdminDash';
 import Header from './Header';
 import './Header.css';
 import Sidebar from './Sidebar';
+import LandPage from '../LandPage/LandPage';
+import Home from '../LandPage/Home';
+import About from '../LandPage/About';
+import ContactComp from '../LandPage/ContactComp';
+import Login from '../LandPage/Login';
+
+import DashboardComp from './DashboardComp';
+import UserDash from '../LandPage/UserDash';
+
+
+
+
 //import DeleteBranch from './DeleteBranch';
 
 
@@ -22,34 +34,70 @@ const AppRouter = () => {
     return (
         <div className='app-container'>
      
-      <BrowserRouter>
-      <Header />
-        <div className='content-container'>
-          <div className='sidebar-container'>
-            <Sidebar />
-          </div>
-          <div className='body-container'>
-            <Routes>
-                   <Route path='/' element={<AdminDash/>}></Route>
-                   
-                   <Route path='/branch' element={<Branch/>}/>
-                   <Route path='/create' element={<AddBranch/>}/>
-                   <Route path='/edit/:id' element={<EditBranch />} />
-                
-                
+     <Routes>
+     <Route path='userdash' element={<UserDash/>}/>
+      <Route path='/' element={<LandPage/>}>
+                  <Route path="" element={<Home />} />
+                  <Route path="home" element={<Home />} />
+                   <Route path="about" element={<About />} />
+                   <Route path="contact" element={<ContactComp />} />
+                   <Route path="login" element={<Login />} /> 
                  
+      </Route>
+      <Route path='/admindash' element={<AdminDash/>}>
+                   <Route path='' element={<DashboardComp/>}/>
+                   <Route path='branch' element={<Branch/>}/>
+                   <Route path='create' element={<AddBranch/>}/>
+                   <Route path='edit/:id' element={<EditBranch />} />
                   
-                   <Route path='/emp' element={<EmpTable/>}/>
-                   <Route path='/empcreate' element={<AddEmp/>}/>
-                   <Route path='/empedit/:id' element={<EditEmp />} />
+                   <Route path='emp' element={<EmpTable/>}/>
+                   <Route path='empcreate' element={<AddEmp/>}/>
+                   <Route path='empedit/:id' element={<EditEmp />} />
                   
-                    <Route path='/project' element={<ProjectTable/>}/>
-                   <Route path='/projectcreate' element={<AddProject/>}/>
-                   <Route path='/projectedit/:id' element={<EditProject />} />
-            </Routes>
+                    <Route path='project' element={<ProjectTable/>}/>
+                   <Route path='projectcreate' element={<AddProject/>}/>
+                   <Route path='projectedit/:id' element={<EditProject />} />
+      </Route>
+
+      
+     </Routes>
+      {/* <Header /> */}
+        {/* <div className='content-container'>
+           <div className='sidebar-container'>
+            <Sidebar /> 
           </div>
-        </div>
-      </BrowserRouter>
+  
+        <div className='body-container'>
+          
+            <Routes>
+                   <Route path='/' element={<LandPage/>}/>
+                   <Route path="/home" element={<Home />} />
+                   <Route path="/about" element={<About />} />
+                   <Route path="/contact" element={<ContactComp />} />
+                   <Route path="/login" element={<Login />} /> 
+                   <Route path="/admin" element={<AppRouter />} />
+                   <Route path='/admindash' element={<AdminDash/>}>
+                   <Route path='branch' element={<Branch/>}/>
+                   <Route path='create' element={<AddBranch/>}/>
+                   <Route path='edit/:id' element={<EditBranch />} />
+                  
+                   <Route path='emp' element={<EmpTable/>}/>
+                   <Route path='empcreate' element={<AddEmp/>}/>
+                   <Route path='empedit/:id' element={<EditEmp />} />
+                  
+                    <Route path='project' element={<ProjectTable/>}/>
+                   <Route path='projectcreate' element={<AddProject/>}/>
+                   <Route path='projectedit/:id' element={<EditProject />} />
+              </Route>
+                   
+              <Route path='admindash' element={<AdminDash/>}/>
+                  
+                   
+            </Routes>
+            
+          </div>
+        </div> */}
+  
     </div>
     )
 }

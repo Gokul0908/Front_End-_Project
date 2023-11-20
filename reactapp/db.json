@@ -13,12 +13,6 @@
       "sector": "ITi"
     },
     {
-      "id": 4,
-      "branchName": "TambaramInfo",
-      "location": "Tambaram",
-      "sector": "IT"
-    },
-    {
       "id": 5,
       "branchName": "OMRInfo",
       "location": "siruseri",
@@ -35,6 +29,12 @@
       "location": "chennai",
       "sector": "IT",
       "id": 9
+    },
+    {
+      "branchName": "Delhi",
+      "location": "Dilli",
+      "sector": "It",
+      "id": 10
     }
   ],
   "employee": [
@@ -51,7 +51,7 @@
       "mobile": "886576597",
       "email": "raj@gmail.com",
       "address": "chengalpat",
-      "pass":"raj@123"
+      "pass": "raj@123"
     },
     {
       "id": 3,
@@ -68,8 +68,8 @@
       "id": 4
     },
     {
-      "name":"admin",
-      "pass":"admin@123"
+      "name": "admin",
+      "pass": "admin@123"
     }
   ],
   "project": [
